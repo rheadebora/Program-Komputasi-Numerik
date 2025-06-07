@@ -27,7 +27,7 @@ Soal No. 28
             if j <= 4:
                 print(f"diff[{i}, {j}] = {round(diff[i, j], 2)}")
     return diff
-##membuat tabel dengan nilai y asli di kolom pertama, lalu nilai selisih majunya di kolom selanjutnya
+membuat tabel dengan nilai y asli di kolom pertama, lalu nilai selisih majunya di kolom selanjutnya
 
     def stirling_interpolation(x_vals, y_vals, x0_val, x_target_val):
     x_vals = np.array(x_vals, dtype=float)
@@ -81,7 +81,7 @@ Soal No. 28
     hasil = stirling_interpolation(x_vals, y_vals, x0, xt)
     print(f"\nf({xt}) = {hasil}")
     
-##melakukan interpolasi stirling, dengan menghitung nilai pendekatan f(x) menggunakan rumus Stirling, dimulai dari nilai tengah dan menambahkan suku-suku berdasarkan beda pusat dari tabel selisih. Setiap suku melibatkan variabel 𝑆, faktorial, dan nilai beda pusat orde tertentu untuk meningkatkan akurasi. Lalu mencetak hasil akhir.
+melakukan interpolasi stirling, dengan menghitung nilai pendekatan f(x) menggunakan rumus Stirling, dimulai dari nilai tengah dan menambahkan suku-suku berdasarkan beda pusat dari tabel selisih. Setiap suku melibatkan variabel 𝑆, faktorial, dan nilai beda pusat orde tertentu untuk meningkatkan akurasi. Lalu mencetak hasil akhir.
 
     print(f"Et ={abs((yt - hasil)/yt) * 100 : .2f}")
-##mencetak nilai true error dari rumus (|nilai sebenarnya - hasil| / nilai sebenarnya ) * 100%
+mencetak nilai true error dari rumus (|nilai sebenarnya - hasil| / nilai sebenarnya ) * 100%
