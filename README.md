@@ -1,5 +1,4 @@
 # Program-Komputasi-Numerik
-Kelompok A18
 
 Umi Lailatul Khotimah (5025241062)
 Nashwa Aulia Putri Diansyah (5025241064)
@@ -24,7 +23,7 @@ Soal No. 28
             if j <= 4:
                 print(f"diff[{i}, {j}] = {round(diff[i, j], 2)}")
     return diff
-##membuat tabel dengan nilai y asli di kolom pertama, lalu nilai selisih majunya
+##membuat tabel dengan nilai y asli di kolom pertama, lalu nilai selisih majunya di kolom selanjutnya
 
     def stirling_interpolation(x_vals, y_vals, x0_val, x_target_val):
     x_vals = np.array(x_vals, dtype=float)
