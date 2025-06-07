@@ -10,11 +10,11 @@ Mahirah Yasmin Aulia Mawahib (5025241095)
 Soal No. 28
 
 # Penjelasan Kode
-import numpy as np
-from sympy import Rational, factorial, simplify
-##mimport library numpy dan sympy 
+    import numpy as np
+    from sympy import Rational, factorial, simplify
+    ##mimport library numpy dan sympy 
 
-def compute_diff_table(y_vals):
+    def compute_diff_table(y_vals):
     n = len(y_vals)
     diff = np.zeros((n, n))
     diff[:, 0] = y_vals
@@ -26,7 +26,7 @@ def compute_diff_table(y_vals):
     return diff
 ##membuat tabel dengan nilai y asli di kolom pertama, lalu nilai selisih majunya
 
-def stirling_interpolation(x_vals, y_vals, x0_val, x_target_val):
+    def stirling_interpolation(x_vals, y_vals, x0_val, x_target_val):
     x_vals = np.array(x_vals, dtype=float)
     y_vals = np.array(y_vals, dtype=float)
 
@@ -65,18 +65,20 @@ def stirling_interpolation(x_vals, y_vals, x0_val, x_target_val):
 
     y_interp = round(result, 2)
     return y_interp
-
-x_vals = [3, 6, 9, 12, 15, 18, 21, 24, 27]
-y_vals = [-741, -186, 32121, 184956, 634575, 1673874, 3741549, 7451256, 13620771]
-
-x0 = 15
-xt = 16
-yt = 897104
-
-hasil = stirling_interpolation(x_vals, y_vals, x0, xt)
-
-print(f"\nf({xt}) = {hasil}")
+    x_vals = [3, 6, 9, 12, 15, 18, 21, 24, 27]
+    y_vals = [-741, -186, 32121, 184956, 634575, 1673874, 3741549, 7451256, 13620771]
+    x0 = 15
+    xt = 16
+    yt = 897104
+    
+    hasil = stirling_interpolation(x_vals, y_vals, x0, xt)
+    x0 = 15
+    xt = 16
+    yt = 897104
+    hasil = stirling_interpolation(x_vals, y_vals, x0, xt)
+    print(f"\nf({xt}) = {hasil}")
+    
 ##melakukan interpolasi stirling, dengan menghitung nilai pendekatan f(x) menggunakan rumus Stirling, dimulai dari nilai tengah dan menambahkan suku-suku berdasarkan beda pusat dari tabel selisih. Setiap suku melibatkan variabel 𝑆, faktorial, dan nilai beda pusat orde tertentu untuk meningkatkan akurasi. Lalu mencetak hasil akhir.
 
-print(f"Et ={abs((yt - hasil)/yt) * 100 : .2f}")
+    print(f"Et ={abs((yt - hasil)/yt) * 100 : .2f}")
 ##mencetak nilai true error dari rumus (|nilai sebenarnya - hasil| / nilai sebenarnya ) * 100%
